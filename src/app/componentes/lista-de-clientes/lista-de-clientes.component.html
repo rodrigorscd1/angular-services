@@ -1,0 +1,14 @@
+<button (click)="verificaService()">Service</button>
+
+
+<button (click)="getData()">Exibir dados da Service</button>
+<ul>
+  <li *ngFor="let cliente of clientes">Id: {{cliente.id}}, Nome: {{cliente.nome}}, Idade: {{cliente.idade}}</li>
+</ul>
+
+<input type="number" [(ngModel)]="idadeMinima" placeholder="Idade mínima">
+
+<button (click)="filtrarClientes()">Filtrar Clientes com mais de 18 anos</button>
+<ul>
+  <li *ngFor="let cliente of clientesFiltrados">Id: {{cliente.id}}, Nome: {{cliente.nome}}, Idade: {{cliente.idade}}</li>
+</ul>
